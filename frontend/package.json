@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "private": true,
-  "proxy": "http://127.0.0.1:8000/",
+  "proxy": "http://127.0.0.1:5173",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -14,7 +14,8 @@
     "axios": "^0.21.1",
     "flowbite": "^2.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
