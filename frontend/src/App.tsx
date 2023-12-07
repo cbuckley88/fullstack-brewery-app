@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
-import axios from "axios";
+import axios, { AxiosResponse } from 'axios';
+
+
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,7 +16,7 @@ function App() {
   const refreshList = () => {
     axios
       .get("/api/beer/")
-      .then((res) => setData(res.data))
+      .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
 
