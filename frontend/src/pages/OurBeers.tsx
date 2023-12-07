@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 
@@ -10,7 +11,7 @@ interface ApiResponse {
   data: Beer[];
 }
 
-function App() {
+const OurBeers: React.FC = () => {
   const apiUrl = 'http://127.0.0.1:8000/api/beer/';
 
   const [beers, setBeers] = useState<Beer[]>([]);
@@ -45,6 +46,6 @@ function App() {
       </ul>
     </>
   );
-}
+};
 
-export default App;
+export default OurBeers;
