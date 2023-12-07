@@ -9,9 +9,6 @@ class BeerAdmin(admin.ModelAdmin):
         'description', 
         'abv', 
         'ibu', 
-        'image_url', 
-        'quantity', 
-        'price',
         )
 
 
