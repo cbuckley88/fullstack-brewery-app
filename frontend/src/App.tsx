@@ -1,7 +1,22 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
+import { useEffect, useState } from 'react'
+import axios from "axios";
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    refreshList();
+
+    console.log('data', data)
+  }, []);
+
+  const refreshList = () => {
+    axios
+      .get("/api/beer/")
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  };
+
 
   return (
     <>
